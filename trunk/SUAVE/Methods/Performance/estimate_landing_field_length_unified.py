@@ -80,7 +80,7 @@ def estimate_landing_field_length_unified(vehicle, analyses, results, airport, m
     # ==============================================
     # Computing stall speed
     # ==============================================
-    Vstall = (2.0 * mass_to * sea_level_gravity / (rho * reference_area * maximum_lift_coefficient)) ** 0.5
+    Vstall = (2.0 * mass_to * sea_level_gravity * rho / (rho * reference_area * maximum_lift_coefficient)) ** 0.5
 
     mass_land = mass_to - mass_fuel
 

@@ -90,7 +90,7 @@ def wing_loading_stall(vehicle, analyses, airport):
     # ==============================================
     # Computing speeds (Vs, Vapp)
     # ==============================================
-    Vstall = (2.0 * mass_to * sea_level_gravity / (rho * Sw * maximum_lift_coefficient)) ** 0.5
+    Vstall = (2.0 * mass_to * sea_level_gravity * rho / (rho * Sw * maximum_lift_coefficient)) ** 0.5
 
     wing_loading_stall = 0.5 * rho * Vstall**2 * maximum_lift_coefficient
     

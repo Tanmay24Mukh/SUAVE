@@ -59,7 +59,9 @@ def print_aircraft_info(vehicle, filename = 'aircraft_info.dat'):
     fid.write(' PROPULSION SYSTEM:\n')
     fid.write(' Battery mass [kg]   = {}\n'.format(vehicle.propulsors.unified_propsys.battery.mass_properties.mass))
     fid.write(' Battery volume [m^3]   = {}\n'.format(vehicle.propulsors.unified_propsys.battery.max_energy / vehicle.propulsors.unified_propsys.battery.specific_volume))
-
+    fid.write(' ------------------------\n')
+    fid.write(' WING LOADING:\n')
+    fid.write(' Wing loading [kg/m^2] = {}\n'.format(vehicle.wing_loading))
     # Print timestamp
     fid.write('\n'+ 43*'-'+ '\n' + datetime.datetime.now().strftime(" %A, %d. %B %Y %I:%M:%S %p"))
     # done

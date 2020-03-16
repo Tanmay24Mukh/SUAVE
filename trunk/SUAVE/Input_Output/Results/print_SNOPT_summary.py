@@ -7,7 +7,7 @@
 def print_SNOPT_summary(filename = 'SNOPT_summary.out'):
     """Function reads and prints information from SNOPT summary file"""
 
-    print('-------SNOPT output summery-------\n')
+    print('-------SNOPT output summary-------\n')
 
     linesList = [line.rstrip('\n') for line in open(filename)]
 

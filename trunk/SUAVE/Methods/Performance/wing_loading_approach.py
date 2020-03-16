@@ -94,7 +94,7 @@ def wing_loading_approach(vehicle, analyses, airport, m_fuel):
     # ==============================================
     # Computing speeds (Vs, Vapp)
     # ==============================================
-    Vstall = (2.0 * (mass_to - m_fuel) * sea_level_gravity / (rho * Sw * maximum_lift_coefficient)) ** 0.5
+    Vstall = (2.0 * (mass_to - m_fuel) * sea_level_gravity * rho / (rho * Sw * maximum_lift_coefficient)) ** 0.5
     Vapp = 1.22 * Vstall
 
     wing_loading_approach = 0.335 * rho * Vapp**2 * maximum_lift_coefficient
